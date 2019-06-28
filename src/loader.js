@@ -18,4 +18,4 @@ const load = (moduleName) => {
     };
 };
 
-export default load;
+export {load};

@@ -25,5 +25,5 @@ var load = function load(moduleName) {
     };
 };
 
-exports.default = load;
+exports.load = load;
 //# sourceMappingURL=loader.js.map
