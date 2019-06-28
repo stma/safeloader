@@ -1,0 +1,53 @@
+{
+  "name": "safeloader",
+  "version": "1.0.0",
+  "description": "A module loader in a safety way.",
+  "main": "dist/loader.js",
+  "scripts": {
+    "babel": "babel src -d dist --source-maps --presets es2015",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint src",
+    "clean": "rm -r ./dist/*",
+    "build": "npm-run-all clean lint babel",
+    "precommit": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stma/safeloader.git"
+  },
+  "author": "Matyas Steiner <steiner.matyas@gmail.com>",
+  "license": "Apache-2.0",
+  "licenses": [
+    {
+      "type": "Apache-2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0"
+    }
+  ],
+  "bugs": {
+    "url": "https://github.com/stma/safeloader/issues"
+  },
+  "homepage": "https://github.com/stma/safeloader#readme",
+  "devDependencies": {
+    "babel-cli": "^6.24.0",
+    "babel-eslint": "^7.2.1",
+    "babel-preset-es2015": "^6.24.0",
+    "eslint": "^3.18.0",
+    "eslint-config-google": "^0.7.1",
+    "husky": "^0.13.3",
+    "npm-run-all": "^4.0.2"
+  },
+  "eslintConfig": {
+    "extends": [
+      "eslint:recommended",
+      "google"
+    ],
+    "parserOptions": {
+      "ecmaVersion": 6,
+      "sourceType": "module"
+    },
+    "env": {
+      "node": true
+    },
+    "parser": "babel-eslint"
+  }
+}
