@@ -6,7 +6,7 @@ const load = (moduleName) => {
     try {
         module = require(moduleName);
     } catch (error) {
-        throw new TypeError(`No fond module - ${moduleName}: ${error}`);
+        console.info(`***w* No fond module - ${moduleName}: ${error.message}`);
     }
 
     return (...args) => {

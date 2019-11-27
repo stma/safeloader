@@ -7,7 +7,7 @@
     "babel": "babel src -d dist --source-maps --presets es2015",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint src",
-    "clean": "rm -r ./dist/*",
+    "clean": "rm -rf ./dist/*",
     "build": "npm-run-all clean lint babel",
     "precommit": "npm run build"
   },
@@ -47,6 +47,9 @@
     },
     "env": {
       "node": true
+    },
+    "rules": {
+      "no-console": "off"
     },
     "parser": "babel-eslint"
   }
